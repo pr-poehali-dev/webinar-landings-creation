@@ -217,11 +217,10 @@ export default function Index() {
       {/* HEADER */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 backdrop-blur-xl bg-black/30">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-cyan-400 flex items-center justify-center">
-              <Icon name="Zap" size={16} className="text-white" />
-            </div>
-            <span className="font-oswald font-semibold text-lg tracking-wide">WebinarPro</span>
+          <div className="flex flex-col leading-tight">
+            <span className="font-oswald font-bold text-xl tracking-wide text-white">МедОбраз</span>
+            <span className="text-white/50 text-[10px] leading-snug">АНО ДПО «НОЦ СМТ» при поддержке</span>
+            <span className="text-white/50 text-[10px] leading-snug">Союза охраны психического здоровья</span>
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm text-white/60">
             <a href="#schedule" className="hover:text-white transition-colors">Расписание</a>
@@ -231,10 +230,10 @@ export default function Index() {
             <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
           </nav>
           <a
-            href="#register"
+            href="#schedule"
             className="hidden md:flex items-center gap-2 px-5 py-2 rounded-full bg-purple-500 hover:bg-purple-400 text-white text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-purple-500/30"
           >
-            Зарегистрироваться
+            Расписание
           </a>
         </div>
       </header>
@@ -342,7 +341,7 @@ export default function Index() {
                     href="#register"
                     className="px-5 py-2.5 rounded-xl bg-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-semibold hover:bg-purple-500 hover:text-white transition-all duration-200 whitespace-nowrap"
                   >
-                    Записаться →
+                    Зарегистрироваться →
                   </a>
                 </div>
               </div>
