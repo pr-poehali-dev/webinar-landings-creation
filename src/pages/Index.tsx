@@ -240,7 +240,7 @@ export default function Index() {
       </header>
 
       {/* HERO */}
-      <section className="relative pt-32 pb-24 px-6 overflow-hidden">
+      <section className="relative pt-28 pb-12 px-6 overflow-hidden">
         <div className="absolute top-20 left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-float pointer-events-none" />
         <div className="absolute top-40 right-10 w-80 h-80 bg-cyan-400/8 rounded-full blur-3xl animate-float-delayed pointer-events-none" />
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent" />
@@ -262,22 +262,7 @@ export default function Index() {
             Один раз в месяц · 2 ведущих · одна тема · дискуссия + ответы на вопросы участников
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#register"
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 text-white font-semibold text-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105"
-            >
-              Зарегистрироваться бесплатно
-            </a>
-            <a
-              href="#schedule"
-              className="px-8 py-4 rounded-full border border-white/20 text-white/80 font-semibold text-lg hover:border-white/40 hover:text-white transition-all duration-300"
-            >
-              Смотреть расписание
-            </a>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-6">
             {[
               { num: "11", label: "встреч в 2026 году" },
               { num: "19:30", label: "МСК, последний пн. месяца" },
@@ -293,7 +278,7 @@ export default function Index() {
       </section>
 
       {/* SCHEDULE */}
-      <section id="schedule" className="py-24 px-6">
+      <section id="schedule" className="py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <span className="text-purple-400 text-sm font-semibold uppercase tracking-widest">Расписание</span>
@@ -352,7 +337,7 @@ export default function Index() {
       </section>
 
       {/* AUDIENCE */}
-      <section id="audience" className="py-24 px-6 relative">
+      <section id="audience" className="py-12 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-cyan-400/5 pointer-events-none" />
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -402,7 +387,7 @@ export default function Index() {
       </section>
 
       {/* FORMAT */}
-      <section id="format" className="py-24 px-6">
+      <section id="format" className="py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <span className="text-pink-400 text-sm font-semibold uppercase tracking-widest">Формат</span>
@@ -443,7 +428,7 @@ export default function Index() {
       </section>
 
       {/* BENEFITS */}
-      <section id="benefits" className="py-24 px-6 relative">
+      <section id="benefits" className="py-12 px-6 relative">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent" />
         <div className="max-w-6xl mx-auto">
@@ -471,7 +456,7 @@ export default function Index() {
       </section>
 
       {/* REGISTER */}
-      <section id="register" className="py-24 px-6">
+      <section id="register" className="py-12 px-6">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">
             <span className="text-cyan-400 text-sm font-semibold uppercase tracking-widest">Регистрация</span>
@@ -543,7 +528,7 @@ export default function Index() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-24 px-6">
+      <section id="faq" className="py-12 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-14">
             <span className="text-pink-400 text-sm font-semibold uppercase tracking-widest">FAQ</span>
