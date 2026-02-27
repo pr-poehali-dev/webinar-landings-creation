@@ -168,9 +168,9 @@ const benefits = [
 
 const format = [
   { label: "Длительность", value: "90 минут", icon: "Clock" },
-  { label: "Платформа", value: "Zoom + YouTube", icon: "Monitor" },
-  { label: "Участников", value: "До 150 чел.", icon: "Users" },
-  { label: "Формат", value: "Живой эфир", icon: "Radio" },
+  { label: "Время", value: "19:30 МСК", icon: "Timer" },
+  { label: "Периодичность", value: "Раз в месяц", icon: "CalendarDays" },
+  { label: "Участие", value: "Бесплатно", icon: "BadgeCheck" },
 ];
 
 const faqs = [
@@ -248,18 +248,18 @@ export default function Index() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse-glow inline-block" />
-            Бесплатная серия — март 2026
+            Бесплатные встречи для специалистов · 2026
           </div>
 
           <h1 className="font-oswald text-5xl md:text-7xl font-bold leading-none mb-6 animate-fade-in">
-            <span className="gradient-text">4 вебинара,</span>
-            <br />
-            которые изменят<br />
-            <span className="text-white">твою карьеру</span>
+            <span className="gradient-text">Вопрос ребром</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10">
-            Серия бесплатных онлайн-встреч для специалистов, которые хотят расти быстрее, зарабатывать больше и строить правильные связи
+          <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-4">
+            Ежемесячные живые видеовстречи в формате вебинар-дискуссии для специалистов в сфере психического здоровья
+          </p>
+          <p className="text-white/40 text-base max-w-xl mx-auto mb-10">
+            Один раз в месяц · 2 ведущих · одна тема · дискуссия + ответы на вопросы участников
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -279,9 +279,9 @@ export default function Index() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-16">
             {[
-              { num: "4", label: "вебинара в серии" },
-              { num: "500+", label: "мест для участников" },
-              { num: "0 ₽", label: "полностью бесплатно" },
+              { num: "11", label: "встреч в 2026 году" },
+              { num: "19:30", label: "МСК, последний пн. месяца" },
+              { num: "0 ₽", label: "участие бесплатно" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="font-oswald text-4xl font-bold gradient-text">{stat.num}</div>
@@ -425,9 +425,9 @@ export default function Index() {
             <h3 className="font-oswald text-2xl font-semibold text-white mb-8">Как проходит каждый вебинар</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { step: "01", title: "Контент (45 мин)", desc: "Структурированный материал от эксперта с практическими примерами и кейсами" },
-                { step: "02", title: "Практика (15 мин)", desc: "Живые упражнения и разбор ситуаций участников прямо во время эфира" },
-                { step: "03", title: "Q&A (30 мин)", desc: "Открытые вопросы спикеру — задайте своё и услышьте ответы коллег" },
+                { step: "01", title: "2 ведущих, одна тема", desc: "Мальцева Екатерина и Шмакова Евгения рассматривают тему с разных сторон — без единственно правильного ответа" },
+                { step: "02", title: "Дискуссия", desc: "Живое обсуждение полярных позиций, разбор типовых ситуаций из практики" },
+                { step: "03", title: "Ответы на вопросы", desc: "Участники задают вопросы заранее или в эфире — ведущие разбирают логику решения" },
               ].map((step) => (
                 <div key={step.step} className="flex gap-4">
                   <span className="font-oswald text-4xl font-black text-purple-500/30 leading-none">{step.step}</span>
