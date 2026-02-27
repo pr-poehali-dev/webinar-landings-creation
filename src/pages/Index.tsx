@@ -197,9 +197,9 @@ const faqs = [
 ];
 
 const tagColors: Record<string, string> = {
-  cyan: "border-cyan-400/40 text-cyan-400 bg-cyan-400/10",
-  purple: "border-purple-400/40 text-purple-400 bg-purple-400/10",
-  pink: "border-pink-400/40 text-pink-400 bg-pink-400/10",
+  cyan: "border-purple-500/30 text-purple-300 bg-purple-500/10",
+  purple: "border-purple-500/30 text-purple-300 bg-purple-500/10",
+  pink: "border-purple-500/30 text-purple-300 bg-purple-500/10",
 };
 
 export default function Index() {
@@ -319,13 +319,13 @@ export default function Index() {
                     {w.day && <div className="text-white/50 text-[10px] mt-0.5 hidden sm:block">{w.day}</div>}
                   </div>
                   <div className="sm:hidden">
-                    <div className="font-oswald text-base font-bold text-cyan-400">{w.time}</div>
+                    <div className="font-oswald text-base font-bold text-purple-400">{w.time}</div>
                     <div className="text-white/40 text-xs">МСК</div>
                   </div>
                 </div>
 
                 <div className="flex-shrink-0 text-center hidden md:block">
-                  <div className="font-oswald text-xl font-bold text-cyan-400">{w.time}</div>
+                  <div className="font-oswald text-xl font-bold text-purple-400">{w.time}</div>
                   <div className="text-white/40 text-xs">МСК</div>
                 </div>
 
@@ -334,7 +334,7 @@ export default function Index() {
                     <span className={`text-xs px-2 sm:px-3 py-1 rounded-full border font-medium ${tagColors[w.tagColor]}`}>
                       {w.tag}
                     </span>
-                    <span className="hidden sm:block md:hidden text-cyan-400 text-sm font-semibold">{w.time} МСК</span>
+                    <span className="hidden sm:block md:hidden text-purple-400 text-sm font-semibold">{w.time} МСК</span>
                   </div>
                   <h3 className="font-oswald text-lg sm:text-xl md:text-2xl font-semibold text-white mb-1 sm:mb-2 leading-tight">
                     {w.title}
@@ -365,7 +365,7 @@ export default function Index() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-8 sm:gap-16 items-start">
             <div>
-              <span className="text-cyan-400 text-xs sm:text-sm font-semibold uppercase tracking-widest">Аудитория</span>
+              <span className="text-purple-400 text-xs sm:text-sm font-semibold uppercase tracking-widest">Аудитория</span>
               <h2 className="font-oswald text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-4 sm:mb-6 text-white">
                 Для кого эти<br />
                 <span className="gradient-text">вебинары?</span>
@@ -399,7 +399,7 @@ export default function Index() {
                   className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl card-glass transition-all duration-300"
                 >
                   <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-cyan-500/15 to-purple-400/10 border border-cyan-500/20 flex items-center justify-center flex-shrink-0">
-                    <Icon name={item.icon} size={18} className="text-cyan-400" />
+                    <Icon name={item.icon} size={18} className="text-purple-400" />
                   </div>
                   <span className="text-white/70 font-medium text-sm sm:text-base">{item.text}</span>
                 </div>
@@ -413,7 +413,7 @@ export default function Index() {
       <section id="format" className="py-10 sm:py-12 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 sm:mb-14">
-            <span className="text-pink-400 text-xs sm:text-sm font-semibold uppercase tracking-widest">Формат</span>
+            <span className="text-purple-400 text-xs sm:text-sm font-semibold uppercase tracking-widest">Формат</span>
             <h2 className="font-oswald text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-white">Как это работает</h2>
           </div>
 
@@ -421,7 +421,7 @@ export default function Index() {
             {format.map((f) => (
               <div key={f.label} className="card-glass rounded-2xl p-4 sm:p-6 text-center">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-pink-500/20 to-purple-500/10 border border-pink-500/20 flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <Icon name={f.icon} size={18} className="text-pink-400" />
+                  <Icon name={f.icon} size={18} className="text-purple-400" />
                 </div>
                 <div className="font-oswald text-lg sm:text-xl font-bold text-white mb-1">{f.value}</div>
                 <div className="text-white/50 text-xs sm:text-sm">{f.label}</div>
@@ -482,7 +482,7 @@ export default function Index() {
       <section id="faq" className="py-10 sm:py-12 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8 sm:mb-14">
-            <span className="text-pink-400 text-xs sm:text-sm font-semibold uppercase tracking-widest">FAQ</span>
+            <span className="text-purple-400 text-xs sm:text-sm font-semibold uppercase tracking-widest">FAQ</span>
             <h2 className="font-oswald text-3xl sm:text-4xl md:text-5xl font-bold mt-2 text-white">Частые вопросы</h2>
           </div>
 
