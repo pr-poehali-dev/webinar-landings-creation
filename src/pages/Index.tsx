@@ -126,42 +126,43 @@ const webinars = [
 ];
 
 const audience = [
-  { icon: "Briefcase", text: "Специалисты с опытом 2–10 лет" },
-  { icon: "TrendingUp", text: "Те, кто хочет расти быстрее рынка" },
-  { icon: "Target", text: "Ищущие новые возможности и проекты" },
-  { icon: "Users", text: "Руководители и тимлиды" },
+  { icon: "Stethoscope", text: "Практикующие психологи", sub: "Основная аудитория" },
+  { icon: "Brain", text: "Психотерапевты", sub: "Основная аудитория" },
+  { icon: "Activity", text: "Психиатры", sub: "Основная аудитория" },
+  { icon: "GraduationCap", text: "Студенты старших курсов профильных направлений", sub: "Дополнительная аудитория" },
+  { icon: "Sprout", text: "Начинающие специалисты, выстраивающие правила работы", sub: "Дополнительная аудитория" },
 ];
 
 const benefits = [
   {
-    icon: "Zap",
-    title: "Практические инструменты",
-    desc: "Готовые техники, которые можно применить сразу после вебинара",
+    icon: "GitBranch",
+    title: "Рамка выбора",
+    desc: "Какие есть варианты действий в ситуации и чем они отличаются",
   },
   {
-    icon: "BookOpen",
-    title: "Конспект и материалы",
-    desc: "Каждый участник получает структурированные заметки и шаблоны",
+    icon: "SlidersHorizontal",
+    title: "Критерии границ",
+    desc: "Где проходит «да/нет» и какие последствия у каждого решения",
   },
   {
-    icon: "MessageCircle",
-    title: "Q&A с экспертом",
-    desc: "30 минут живых вопросов и ответов в конце каждого эфира",
+    icon: "MessageSquareQuote",
+    title: "Готовые формулировки",
+    desc: "Конкретные фразы для переписки, отмен, повышения цены и конфликтных ситуаций",
   },
   {
-    icon: "PlayCircle",
-    title: "Запись эфира",
-    desc: "Доступна 7 дней — смотри в удобное время",
+    icon: "TriangleAlert",
+    title: "Типовые ошибки",
+    desc: "Разбор частых ошибок специалистов по теме и как их обходить",
   },
   {
-    icon: "Award",
-    title: "Сертификат участника",
-    desc: "Подтверждение для резюме и LinkedIn",
+    icon: "ClipboardCheck",
+    title: "Вопросы для самопроверки",
+    desc: "Что уточнить у клиента и что проверить у себя после каждой встречи",
   },
   {
-    icon: "Users",
-    title: "Закрытое сообщество",
-    desc: "Чат участников серии — связи и поддержка после вебинаров",
+    icon: "MessagesSquare",
+    title: "Ваш вопрос — в разборе",
+    desc: "Задайте вопрос заранее и услышьте логику решения без персональных данных",
   },
 ];
 
@@ -354,27 +355,45 @@ export default function Index() {
       <section id="audience" className="py-24 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-cyan-400/5 pointer-events-none" />
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
               <span className="text-cyan-400 text-sm font-semibold uppercase tracking-widest">Аудитория</span>
               <h2 className="font-oswald text-4xl md:text-5xl font-bold mt-2 mb-6 text-white">
                 Для кого эти<br />
                 <span className="gradient-text">вебинары?</span>
               </h2>
-              <p className="text-white/60 text-lg leading-relaxed">
-                Серия создана для специалистов, которые уже добились первых результатов и хотят перейти на следующий уровень — профессионально и финансово.
+              <p className="text-white/60 text-lg leading-relaxed mb-8">
+                Для специалистов, которые ведут консультации и регулярно сталкиваются с вопросами границ, договорённостей и сложных разговоров — и хотят найти ясные формулировки, а не уходить в крайности.
               </p>
+              <div className="card-glass rounded-2xl p-6 border border-purple-500/20">
+                <p className="text-white/50 text-sm leading-relaxed italic">
+                  Темы подобраны так, чтобы обсуждение было релевантно на разных этапах практики — от первых лет до опытных специалистов. Меняются риски и решения, но вопросы остаются теми же.
+                </p>
+              </div>
             </div>
-            <div className="grid grid-cols-1 gap-4">
-              {audience.map((item) => (
+            <div className="grid grid-cols-1 gap-3">
+              <p className="text-white/40 text-xs uppercase tracking-widest font-semibold mb-1">Основная аудитория</p>
+              {audience.filter(a => a.sub === "Основная аудитория").map((item) => (
                 <div
                   key={item.text}
                   className="flex items-center gap-4 p-5 rounded-xl card-glass transition-all duration-300 hover:scale-[1.02]"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-cyan-400/10 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
-                    <Icon name={item.icon} size={22} className="text-purple-400" />
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-500/20 to-cyan-400/10 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
+                    <Icon name={item.icon} size={20} className="text-purple-400" />
                   </div>
                   <span className="text-white/90 font-medium">{item.text}</span>
+                </div>
+              ))}
+              <p className="text-white/40 text-xs uppercase tracking-widest font-semibold mt-4 mb-1">Дополнительная аудитория</p>
+              {audience.filter(a => a.sub === "Дополнительная аудитория").map((item) => (
+                <div
+                  key={item.text}
+                  className="flex items-center gap-4 p-5 rounded-xl card-glass transition-all duration-300 hover:scale-[1.02] border-white/5"
+                >
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-500/15 to-purple-400/10 border border-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                    <Icon name={item.icon} size={20} className="text-cyan-400" />
+                  </div>
+                  <span className="text-white/70 font-medium">{item.text}</span>
                 </div>
               ))}
             </div>
