@@ -483,24 +483,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="py-16 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-transparent to-cyan-400/10 pointer-events-none" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent" />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="font-oswald text-4xl md:text-6xl font-bold text-white mb-4">
-            Готов к новому уровню?
-          </h2>
-          <p className="text-white/60 text-xl mb-8">Следующий вебинар начнётся уже 10 марта в 19:00 МСК</p>
-          <a
-            href="#register"
-            className="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 text-white font-semibold text-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
-          >
-            <Icon name="Rocket" size={22} />
-            Зарегистрироваться бесплатно
-          </a>
-        </div>
-      </section>
+
     </div>
   );
 }
