@@ -204,13 +204,6 @@ const tagColors: Record<string, string> = {
 
 export default function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [formData, setFormData] = useState({ name: "", email: "", webinar: "all" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
 
   return (
     <div className="min-h-screen mesh-bg font-golos text-white overflow-x-hidden noise-overlay">
@@ -455,77 +448,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* REGISTER */}
-      <section id="register" className="py-12 px-6">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-10">
-            <span className="text-cyan-400 text-sm font-semibold uppercase tracking-widest">Регистрация</span>
-            <h2 className="font-oswald text-4xl md:text-5xl font-bold mt-2 text-white">Займи своё место</h2>
-            <p className="text-white/60 mt-3">Бесплатно. Без спама. Только материалы вебинара.</p>
-          </div>
 
-          <div className="card-glass rounded-3xl p-8 md:p-10">
-            {submitted ? (
-              <div className="text-center py-8">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500 to-cyan-400 flex items-center justify-center mx-auto mb-6">
-                  <Icon name="Check" size={36} className="text-white" />
-                </div>
-                <h3 className="font-oswald text-3xl font-bold text-white mb-3">Вы зарегистрированы!</h3>
-                <p className="text-white/60">Мы отправим ссылку на вебинар за 24 часа до начала на ваш email.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label className="block text-sm text-white/60 mb-2">Ваше имя</label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Иван Иванов"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-purple-500/60 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm text-white/60 mb-2">Email</label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="ivan@example.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-purple-500/60 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm text-white/60 mb-2">Выберите вебинар</label>
-                  <select
-                    value={formData.webinar}
-                    onChange={(e) => setFormData({ ...formData, webinar: e.target.value })}
-                    className="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-purple-500/60 transition-all appearance-none"
-                  >
-                    <option value="all" className="bg-gray-900">Все вебинары серии</option>
-                    {webinars.map((w) => (
-                      <option key={w.id} value={w.id} className="bg-gray-900">
-                        {w.date} — {w.title}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-500 to-purple-600 text-white font-semibold text-lg hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-[1.02] mt-2"
-                >
-                  Зарегистрироваться бесплатно →
-                </button>
-                <p className="text-center text-white/30 text-xs">
-                  Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
-                </p>
-              </form>
-            )}
-          </div>
-        </div>
-      </section>
 
       {/* FAQ */}
       <section id="faq" className="py-12 px-6">
