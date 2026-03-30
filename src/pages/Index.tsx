@@ -284,7 +284,7 @@ export default function Index() {
           <div className="flex flex-row items-center justify-center gap-6 sm:gap-8 mt-4">
             {[
               { num: "11", label: "встреч в году" },
-              { num: "19:30", label: "МСК, пн. месяца" },
+              { num: "19:00", label: "МСК, пн. месяца" },
               { num: "0 ₽", label: "бесплатно" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
