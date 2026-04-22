@@ -347,9 +347,9 @@ export default function Index() {
 
                 <div className="flex-shrink-0 w-full sm:w-auto">
                   <a
-                    href={w.id === 1 ? "https://course.rosmededucation.ru/question" : "#register"}
-                    target={w.id === 1 ? "_blank" : undefined}
-                    rel={w.id === 1 ? "noopener noreferrer" : undefined}
+                    href={w.id === 1 || w.id === 2 ? "https://course.rosmededucation.ru/question" : "#register"}
+                    target={w.id === 1 || w.id === 2 ? "_blank" : undefined}
+                    rel={w.id === 1 || w.id === 2 ? "noopener noreferrer" : undefined}
                     className="block sm:inline-block text-center px-4 py-2 rounded-xl bg-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-semibold hover:bg-purple-500 hover:text-white transition-all duration-200 whitespace-nowrap"
                   >
                     Зарегистрироваться →
