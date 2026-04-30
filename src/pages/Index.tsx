@@ -352,7 +352,7 @@ export default function Index() {
                     rel={w.id === 3 ? "noopener noreferrer" : undefined}
                     className="block sm:inline-block text-center px-4 py-2 rounded-xl bg-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-semibold hover:bg-purple-500 hover:text-white transition-all duration-200 whitespace-nowrap"
                   >
-                    Зарегистрироваться →
+                    {w.id === 1 || w.id === 2 ? "Смотреть →" : "Зарегистрироваться →"}
                   </a>
                 </div>
               </div>
