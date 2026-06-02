@@ -347,9 +347,9 @@ export default function Index() {
 
                 <div className="flex-shrink-0 w-full sm:w-auto">
                   <a
-                    href={w.id === 1 ? "https://rutube.ru/video/fb1bc15ea528f93f8dd65e8db0bc8f01/" : w.id === 4 ? "https://course.rosmededucation.ru/question" : "#register"}
-                    target={w.id === 1 || w.id === 4 ? "_blank" : undefined}
-                    rel={w.id === 1 || w.id === 4 ? "noopener noreferrer" : undefined}
+                    href={w.id === 1 ? "https://rutube.ru/video/fb1bc15ea528f93f8dd65e8db0bc8f01/" : w.id === 3 ? "#register" : "https://course.rosmededucation.ru/question"}
+                    target={w.id === 3 ? undefined : "_blank"}
+                    rel={w.id === 3 ? undefined : "noopener noreferrer"}
                     className="block sm:inline-block text-center px-4 py-2 rounded-xl bg-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-semibold hover:bg-purple-500 hover:text-white transition-all duration-200 whitespace-nowrap"
                   >
                     {w.id === 1 || w.id === 2 ? "Смотреть →" : w.id === 3 ? "Перенос темы →" : "Зарегистрироваться →"}
